@@ -87,6 +87,8 @@ function mapInit() {
         })
         
         document.querySelector('#add-form').addEventListener('submit', function(e) {
+            let reviewInput = document.getElementsByClassName('review__input');
+            let reviewTextarea = document.querySelector('.review__textarea');
             e.preventDefault();
             const review = {
                 coords,
@@ -94,6 +96,15 @@ function mapInit() {
                 place: this.elements.place.value,
                 reviewText: this.elements.review.value
             };
+
+            if(!this.elements.author.value || !this.elements.place.value || !this.elements.review.value) {
+                for(let i = 0; i < reviewInput.length; i++) {
+                    reviewInput[i].style.border = '1px solid red'
+                };
+
+                reviewTextarea.style.border = '1px solid red'
+                return
+            }
 
             localStorage.reviews = JSON.stringify([...getReviewsFromLS(), review]);
 
