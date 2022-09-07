@@ -1,4 +1,4 @@
-## Выпускной проект курса: "Комплексное обучение JavaScript" (Loftschool)
+# Выпускной проект курса: "Комплексное обучение JavaScript" (Loftschool)
 
 ### Описание: 
 
@@ -17,3 +17,5 @@
 - Webpack
 - Handlebars
 - API Яндекс карт
+
+![](https://github.com/tequilex/geoReview/blob/master/service.jpg)
