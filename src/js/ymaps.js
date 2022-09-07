@@ -30,6 +30,7 @@ function mapInit() {
     })
 
     let clusterer;
+    var now = new Date().toLocaleDateString();
     
     function getReviewsFromLS() {
         const reviews = localStorage.reviews;
@@ -46,6 +47,7 @@ function mapInit() {
                 <div class='review__info'>
                 <div class='review__author'>${review.author}</div>
                 <div class='review__place'>${review.place}</div>
+                <div class='review__date'>${now}</div>
                 </div>
                 <div class='review__text'>${review.reviewText}</div>
                 </div>
